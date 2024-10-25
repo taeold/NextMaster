@@ -1,0 +1,33 @@
+# Settings for Backend (on Cloud Run).
+# See https://firebase.google.com/docs/app-hosting/configure#cloud-run
+runConfig:
+  minInstances: 0
+  # maxInstances: 100
+  # concurrency: 80
+  # cpu: 1
+  # memoryMiB: 512
+
+# Environment variables and secrets.
+env:
+  - variable: PG_HOST
+    value: 35.223.30.232
+    availability:
+      - BUILD
+      - RUNTIME
+
+  - variable: PG_USER
+    value: dev
+    availability:
+      - BUILD
+      - RUNTIME
+
+  - variable: PG_NAME
+    value: app
+    availability:
+      - BUILD
+      - RUNTIME
+
+  Grant access to secrets in Cloud Secret Manager.
+  See https://firebase.google.com/docs/app-hosting/configure#secret-parameters
+  - variable: PG_PWD
+    secret: PG_PWD
