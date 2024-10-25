@@ -14,20 +14,15 @@ env:
     availability:
       - BUILD
       - RUNTIME
-
   - variable: PG_USER
     value: dev
     availability:
       - BUILD
       - RUNTIME
-
   - variable: PG_NAME
     value: app
     availability:
       - BUILD
       - RUNTIME
-
-  Grant access to secrets in Cloud Secret Manager.
-  See https://firebase.google.com/docs/app-hosting/configure#secret-parameters
   - variable: PG_PWD
     secret: PG_PWD
