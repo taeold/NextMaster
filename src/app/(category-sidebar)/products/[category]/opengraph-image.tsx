@@ -2,9 +2,6 @@ import { ImageResponse } from "next/og";
 import { notFound } from "next/navigation";
 import { getCategory } from "@/lib/queries";
 
-// Route segment config
-export const runtime = "edge";
-
 // Image metadata
 export const alt = "About the category";
 export const size = {
