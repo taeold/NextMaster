@@ -1,4 +1,4 @@
-import { drizzle } from "drizzle-orm/vercel-postgres";
+import { drizzle } from "drizzle-orm/node-postgres";
 import * as schema from "./schema";
 
-export const db = drizzle({ schema });
+export const db = drizzle(process.env.PG_HOST!);
