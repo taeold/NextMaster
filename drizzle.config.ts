@@ -9,7 +9,6 @@ export default defineConfig({
     user: process.env.PG_USER!,
     password: process.env.PG_PWD!,
     database: process.env.PG_NAME!,
-    ssl: false,
   },
   verbose: true,
   strict: true,
